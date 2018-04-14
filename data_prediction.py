@@ -116,8 +116,6 @@ def form_download_file(output_folder, output_column, output_row, metrics_column,
         output_path = os.path.join(output_folder, output_filename)
         error_metrics = pd.DataFrame(columns=metrics_column, data=metrics_row)
         download_file = pd.DataFrame(columns=output_column, data=output_row)
-        print error_metrics
-        print download_file
         error_metrics.to_csv(output_path)
         download_file.to_csv(output_path, mode='a', header=True)
         return output_path
