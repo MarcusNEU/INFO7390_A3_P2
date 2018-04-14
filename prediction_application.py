@@ -40,7 +40,7 @@ def main():
         return render_template('download.html', output_column=preview_parameter[0], output_row=preview_parameter[1],
                                total_rows=preview_parameter[2], output_path=output_path)
     except BaseError as e:
-        print e.message
+        print (e.message)
         setLogger().exception(e.message)
         raise BaseError(code=e.code, message=e.message)
 
